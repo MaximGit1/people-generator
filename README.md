@@ -11,13 +11,16 @@
 
 ## About
 
-A generator of data about people in Russian for the database.  There are several modes and settings for generating data about people. You can add your own data for generation or, conversely, delete unnecessary data that is used for generation. :dizzy:
-
+A generator of data about people in Russian for the database.  There are several modes and settings for generating data about people. You can add your own data for generation or, conversely, delete unnecessary data that is used for generation. :dizzy: <br>
+The result of the program:
+```
+{'name': 'Элина', 'surname': 'Быкова', 'patronymic': 'Григориевна', 'sex': 'ж', 'age': 22, 'phone_number': '89451523196', 'phone_number+': '+79451523196', 'en_name': 'Elina', 'en_surname': 'Bykova', 'en_patronymic': 'Grigorievna', 'email': 'bykovaelina@gmail.com', 'birthday': '2001-10-04', 'number_card': '4050340630312383', 'pin': '6583'}  #dict
+```
 ## Documentation
 
 There is already an instance of the people generator in main.py file, you just need to change the instance attributes for more accurate generation.
 
-```
+```python
 person = People(sex='w', age=[18, 25], payment_system='visa')
 p = person.generate()
 ```
@@ -32,7 +35,7 @@ The generation of surnames works according to the rules of the Russian language,
 **But there are indescribable surnames.** For example: <br><br>
 Третьяк (male surname) - Третьяк (female surname) <br><br>
 For such a case, in the file Fio.py there  is a list where surnames are entered.
-```
+```python
 surname_exception = [  # indeclinable surnames
     'Третьяк',
 ]
